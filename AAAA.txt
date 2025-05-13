@@ -4,11 +4,11 @@ WORKDIR /app
 COPY dhatri.py src/aaa/dhatri.py
 CMD ["python","src/aaa/dhatri.py"]
 
-FROM openjdk:17
+FROM openjdk
 WORKDIR /app
-COPY dhatri.py src/aaa/dhatri.py
-RUN javac src/aaa/dhatri.py
-CMD ["java","aaa.dhatri"]
+COPY . /app
+RUN javac Add.java
+CMD ["java","Add"]
 
 docker images
 docker tag previous image name:latest harshitha1130/new image
